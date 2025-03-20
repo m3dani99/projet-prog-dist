@@ -1,0 +1,10 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD='root'
+ENV MYSQL_DATABASE='restaurant_booking'
+ENV MYSQL_USER='khalil'
+ENV MYSQL_PASSWORD='pass123'
+
+COPY init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306
